@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>bbjob</groupId>
+  <artifactId>support</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>support</name>
+  <description>support</description>
+  
+  
+  
+  <properties>
+  <mapper.version>3.4.6</mapper.version>
+  <mybatis.version>3.4.5</mybatis.version>
+  <spring.version>4.3.13.RELEASE</spring.version>
+  </properties>
+  <dependencies>
+  
+  		 <dependency>
+			<groupId>org.springframework</groupId>
+			 <artifactId>spring-beans</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		 <dependency>
+			<groupId>org.springframework</groupId>
+			 <artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+  	 <!--mapper-->
+         <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper</artifactId>
+                <version>${mapper.version}</version>
+         </dependency>
+         <dependency>
+		        <groupId>org.mybatis</groupId>
+		        <artifactId>mybatis</artifactId>
+		        <version>${mybatis.version}</version>
+     	 </dependency>
+  </dependencies>
+</project>
+
+
