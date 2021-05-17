@@ -5,48 +5,14 @@ import java.util.Map;
 
 import com.bbjob.util.HttpClientTool;
 
-public class AppInfoClient {
+public class EAppListTypeClient {
 	
 	public static void main(String[] args) {
 
-		int flag = 1;
+		int flag = 5;
 		
-		AppInfoClient.execute(flag);
+		EAppListTypeClient.execute(flag);
 		
-		// EResController.java
-		/* 1.0  ----- -- --  获取资源列表   list  POST
-		String url = "http://192.168.0.117:9500/solr-api/resource/list";
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("pageNum", 0);
-		// map.put("resName", "大学生压力的来源");
-		map.put("pageSize", 10);
-		*/
-		
-		/* 2.0  ----- -- --  查询资源详情   get/{id}  GET
-		String url = "http://192.168.0.117:9500/res-api/res/get/1038041";
-		Map<String, Object> map = new HashMap<String, Object>();
-		*/
-		
-		/* 3.0  ----- -- --  新增资源   add  POST 
-		String url = "http://192.168.0.117:9500/res-api/res/add";
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("resName", "ceshi0000002");
-		map.put("description", "啊啊啊啊02");
-		*/
-		/*
-		try {
-			// POST 请求调用
-			String result = HttpClientTool.doPost(url, map);
-			
-			// GET  请求调用
-			// String result = HttpClientTool.doGet(url, map);
-			
-			System.out.println(result);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		*/
 	}
 
 	private static void execute(int flag) {
@@ -56,12 +22,11 @@ public class AppInfoClient {
 			case 3 : save(); break;
 			case 4 : edit(); break;
 			case 5 : del(); break;
-			
 		}
 	}
 
 	private static void del() {
-		String url = "http://192.168.0.117:9500/res-api/appinfo/del/14";
+		String url = "http://192.168.0.117:9500/res-api/applisttype/del/20";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -75,9 +40,9 @@ public class AppInfoClient {
 	}
 
 	private static void edit() {
-		String url = "http://192.168.0.117:9500/res-api/appinfo/edit/14";
+		String url = "http://192.168.0.117:9500/res-api/applisttype/edit/20";
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("appName", "ceshi-AAAAAA");
+		map.put("className", "ceshi-AAAAAA");
 		map.put("description", "A20162836");
 		
 		try {
@@ -92,10 +57,11 @@ public class AppInfoClient {
 	}
 
 	private static void save() {
-		String url = "http://192.168.0.117:9500/res-api/appinfo/save";
+		String url = "http://192.168.0.117:9500/res-api/applisttype/save";
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("appName", "ceshi0000001");
+		map.put("className", "ceshi0000001");
 		map.put("description", "啊啊啊啊02");
+		map.put("enable", 1);
 		
 		try {
 			// POST 请求调用
@@ -109,7 +75,7 @@ public class AppInfoClient {
 	}
 
 	private static void get() {
-		String url = "http://192.168.0.117:9500/res-api/appinfo/get/14";
+		String url = "http://192.168.0.117:9500/res-api/applisttype/get/1";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -123,7 +89,7 @@ public class AppInfoClient {
 	}
 
 	private static void list() {
-		String url = "http://192.168.0.117:9500/res-api/appinfo/list";
+		String url = "http://192.168.0.117:9500/res-api/applisttype/list";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("pageNum", 0);
 		// map.put("resName", "大学生压力的来源");

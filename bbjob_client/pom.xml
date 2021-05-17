@@ -13,6 +13,11 @@
 	    <artifactId>httpclient</artifactId>
 	    <version>4.5.3</version>
 	</dependency>
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpmime</artifactId>
+	    <version>4.5.3</version>
+	</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
@@ -24,7 +29,12 @@
 	    <artifactId>commons-lang3</artifactId>
 	    <version>3.7</version>
 	</dependency>
-
+	<!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
+	<dependency>
+		<groupId>org.apache.ant</groupId>
+		<artifactId>ant</artifactId>
+		<version>1.7.0</version>
+	</dependency>
   	<dependency>
   		<groupId>bbjob</groupId>
  		<artifactId>support</artifactId>
