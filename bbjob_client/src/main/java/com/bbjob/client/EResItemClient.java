@@ -7,6 +7,8 @@ import com.bbjob.util.HttpClientTool;
 
 public class EResItemClient {
 	
+	private static final String DOMAIN = "http://101.201.81.238:9500";
+	
 	public static void main(String[] args) {
 
 		int flag = 1;
@@ -25,7 +27,7 @@ public class EResItemClient {
 	}
 
 	private static void del() {
-		String url = "http://192.168.0.117:9500/res-api/resitem/del/42828";
+		String url = DOMAIN + "/res-api/resitem/del/42828";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -39,7 +41,7 @@ public class EResItemClient {
 	}
 
 	private static void edit() {
-		String url = "http://192.168.0.117:9500/res-api/resitem/edit/42828";
+		String url = DOMAIN + "/res-api/resitem/edit/42828";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("realName", "ceshi-AAAAAA.mp4");
 		map.put("eResourceId", 1038133);
@@ -56,7 +58,7 @@ public class EResItemClient {
 	}
 
 	private static void save() {
-		String url = "http://192.168.0.117:9500/res-api/resitem/save";
+		String url = DOMAIN + "/res-api/resitem/save";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("realName", "测试来源.mp4");
 		map.put("fileName", "测试来源");
@@ -78,7 +80,7 @@ public class EResItemClient {
 	}
 
 	private static void get() {
-		String url = "http://192.168.0.117:9500/res-api/resitem/get/669";
+		String url = DOMAIN + "/res-api/resitem/get/669";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -92,7 +94,7 @@ public class EResItemClient {
 	}
 
 	private static void list() {
-		String url = "http://192.168.0.117:9500/res-api/resitem/list";
+		String url = DOMAIN + "/res-api/resitem/list";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("pageNum", 0);
 		// map.put("resName", "大学生压力的来源");

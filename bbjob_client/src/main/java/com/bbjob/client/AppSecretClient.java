@@ -7,6 +7,8 @@ import com.bbjob.util.HttpClientTool;
 
 public class AppSecretClient {
 	
+	private static final String DOMAIN = "http://101.201.81.238:9500";
+	
 	public static void main(String[] args) {
 
 		int flag = 1;
@@ -23,7 +25,7 @@ public class AppSecretClient {
 	}
 
 	private static void appkey() {
-		String url = "http://192.168.0.117:9500/res-api/app/appkey/1";
+		String url = DOMAIN + "/res-api/app/appkey/1";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -38,7 +40,7 @@ public class AppSecretClient {
 	}
 
 	private static void reset() {
-		String url = "http://192.168.0.117:9500/res-api/app/reset/1";
+		String url = DOMAIN + "/res-api/app/reset/1";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -53,7 +55,7 @@ public class AppSecretClient {
 	}
 
 	private static void get() {
-		String url = "http://192.168.0.117:9500/res-api/app/get/1";
+		String url = DOMAIN + "/res-api/app/get/1";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			

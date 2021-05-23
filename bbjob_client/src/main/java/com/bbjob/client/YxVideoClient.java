@@ -7,6 +7,8 @@ import com.bbjob.util.HttpClientTool;
 
 public class YxVideoClient {
 	
+	private static final String DOMAIN = "http://101.201.81.238:9500";
+	
 	public static void main(String[] args) {
 
 		int flag = 1;
@@ -26,7 +28,7 @@ public class YxVideoClient {
 	}
 
 	private static void delbyresid() {
-		String url = "http://192.168.0.117:9500/res-api/video/delbyresid/42827";
+		String url = DOMAIN + "/res-api/video/delbyresid/42827";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -41,7 +43,7 @@ public class YxVideoClient {
 	}
 
 	private static void delete() {
-		String url = "http://192.168.0.117:9500/res-api/video/delete/28742";
+		String url = DOMAIN + "/res-api/video/delete/28742";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			// GET  ÇëÇóµ÷ÓÃ
@@ -54,7 +56,7 @@ public class YxVideoClient {
 	}
 
 	private static void save() {
-		String url = "http://192.168.0.117:9500/res-api/video/save";
+		String url = DOMAIN + "/res-api/video/save";
 		Map<String, Object> map = new HashMap<String, Object>();
 		
 		map.put("eResItemId", 42827);
@@ -76,7 +78,7 @@ public class YxVideoClient {
 	}
 
 	private static void resitem() {
-		String url = "http://192.168.0.117:9500/res-api/video/resitem/669";
+		String url = DOMAIN + "/res-api/video/resitem/669";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -90,7 +92,7 @@ public class YxVideoClient {
 	}
 
 	private static void edit() {
-		String url = "http://192.168.0.117:9500/res-api/video/edit/28742";
+		String url = DOMAIN + "/res-api/video/edit/28742";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("videoName", "ceshi-AAAAAA");
 		map.put("description", "A20162836");
@@ -107,7 +109,7 @@ public class YxVideoClient {
 	}
 
 	private static void get() {
-		String url = "http://192.168.0.117:9500/res-api/video/get/211";
+		String url = DOMAIN + "/res-api/video/get/211";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			

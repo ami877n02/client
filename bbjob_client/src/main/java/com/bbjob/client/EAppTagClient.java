@@ -7,6 +7,8 @@ import com.bbjob.util.HttpClientTool;
 
 public class EAppTagClient {
 	
+	private static final String DOMAIN = "http://101.201.81.238:9500";
+	
 	public static void main(String[] args) {
 
 		int flag = 1;
@@ -25,7 +27,7 @@ public class EAppTagClient {
 	}
 
 	private static void del() {
-		String url = "http://192.168.0.117:9500/res-api/apptag/del/17";
+		String url = DOMAIN + "/res-api/apptag/del/17";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -39,7 +41,7 @@ public class EAppTagClient {
 	}
 
 	private static void edit() {
-		String url = "http://192.168.0.117:9500/res-api/apptag/edit/17";
+		String url = DOMAIN + "/res-api/apptag/edit/17";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("tagName", "ceshi-AAAAAA");
 		
@@ -55,7 +57,7 @@ public class EAppTagClient {
 	}
 
 	private static void add() {
-		String url = "http://192.168.0.117:9500/res-api/apptag/add";
+		String url = DOMAIN + "/res-api/apptag/add";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("appId", "14");
 		map.put("pId", 12);
@@ -74,7 +76,7 @@ public class EAppTagClient {
 	}
 
 	private static void get() {
-		String url = "http://192.168.0.117:9500/res-api/apptag/get/1";
+		String url = DOMAIN + "/res-api/apptag/get/1";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -88,7 +90,7 @@ public class EAppTagClient {
 	}
 
 	private static void list() {
-		String url = "http://192.168.0.117:9500/res-api/apptag/list";
+		String url = DOMAIN + "/res-api/apptag/list";
 		Map<String, Object> map = new HashMap<String, Object>();
 		// map.put("pageNum", 0);
 		// map.put("resName", "大学生压力的来源");

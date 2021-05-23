@@ -9,6 +9,8 @@ import com.bbjob.util.HttpClientTool;
 
 public class AppResClient {
 	
+	private static final String DOMAIN = "http://101.201.81.238:9500";
+	
 	public static void main(String[] args) {
 
 		int flag = 1;
@@ -25,7 +27,7 @@ public class AppResClient {
 	}
 
 	private static void del() {
-		String url = "http://192.168.0.117:9500/res-api/appres/del/15";
+		String url = DOMAIN + "/res-api/appres/del/15";
 		List<Integer> resList = new ArrayList<Integer>();
 		resList.add(1000002);
 		resList.add(1000005);
@@ -42,7 +44,7 @@ public class AppResClient {
 
 
 	private static void add() {
-		String url = "http://192.168.0.117:9500/res-api/appres/add/15";
+		String url = DOMAIN + "/res-api/appres/add/15";
 		List<Integer> resList = new ArrayList<Integer>();
 		resList.add(1000002);
 		resList.add(1000005);
@@ -61,7 +63,7 @@ public class AppResClient {
 	}
 
 	private static void get() {
-		String url = "http://192.168.0.117:9500/res-api/appinfo/get/15";
+		String url = DOMAIN + "/res-api/appinfo/get/15";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			

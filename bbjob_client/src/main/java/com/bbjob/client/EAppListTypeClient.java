@@ -7,6 +7,8 @@ import com.bbjob.util.HttpClientTool;
 
 public class EAppListTypeClient {
 	
+	private static final String DOMAIN = "http://101.201.81.238:9500";
+	
 	public static void main(String[] args) {
 
 		int flag = 5;
@@ -26,7 +28,7 @@ public class EAppListTypeClient {
 	}
 
 	private static void del() {
-		String url = "http://192.168.0.117:9500/res-api/applisttype/del/20";
+		String url = DOMAIN + "/res-api/applisttype/del/20";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -40,7 +42,7 @@ public class EAppListTypeClient {
 	}
 
 	private static void edit() {
-		String url = "http://192.168.0.117:9500/res-api/applisttype/edit/20";
+		String url = DOMAIN + "/res-api/applisttype/edit/20";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("className", "ceshi-AAAAAA");
 		map.put("description", "A20162836");
@@ -57,7 +59,7 @@ public class EAppListTypeClient {
 	}
 
 	private static void save() {
-		String url = "http://192.168.0.117:9500/res-api/applisttype/save";
+		String url = DOMAIN + "/res-api/applisttype/save";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("className", "ceshi0000001");
 		map.put("description", "가가가가02");
@@ -75,7 +77,7 @@ public class EAppListTypeClient {
 	}
 
 	private static void get() {
-		String url = "http://192.168.0.117:9500/res-api/applisttype/get/1";
+		String url = DOMAIN + "/res-api/applisttype/get/1";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			

@@ -7,6 +7,8 @@ import com.bbjob.util.HttpClientTool;
 
 public class AppInfoClient {
 	
+	private static final String DOMAIN = "http://101.201.81.238:9500";
+	
 	public static void main(String[] args) {
 
 		int flag = 1;
@@ -61,7 +63,7 @@ public class AppInfoClient {
 	}
 
 	private static void del() {
-		String url = "http://192.168.0.117:9500/res-api/appinfo/del/14";
+		String url = DOMAIN + "/res-api/appinfo/del/14";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -75,7 +77,7 @@ public class AppInfoClient {
 	}
 
 	private static void edit() {
-		String url = "http://192.168.0.117:9500/res-api/appinfo/edit/14";
+		String url = DOMAIN + "/res-api/appinfo/edit/14";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("appName", "ceshi-AAAAAA");
 		map.put("description", "A20162836");
@@ -92,7 +94,7 @@ public class AppInfoClient {
 	}
 
 	private static void save() {
-		String url = "http://192.168.0.117:9500/res-api/appinfo/save";
+		String url = DOMAIN + "/res-api/appinfo/save";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("appName", "ceshi0000001");
 		map.put("description", "啊啊啊啊02");
@@ -109,7 +111,7 @@ public class AppInfoClient {
 	}
 
 	private static void get() {
-		String url = "http://192.168.0.117:9500/res-api/appinfo/get/14";
+		String url = DOMAIN + "/res-api/appinfo/get/14";
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -123,7 +125,7 @@ public class AppInfoClient {
 	}
 
 	private static void list() {
-		String url = "http://192.168.0.117:9500/res-api/appinfo/list";
+		String url = DOMAIN + "/res-api/appinfo/list";
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("pageNum", 0);
 		// map.put("resName", "大学生压力的来源");
