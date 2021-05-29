@@ -17,7 +17,7 @@ import com.bbjob.util.SplitRunnable;
 
 public class FileUploadClient {
 	
-	private static final String DOMAIN = "http://101.201.81.238:8888";
+	private static final String DOMAIN = "http://101.201.81.238:8103";
 	private static final String PARTPATH = "G:/resource/part/";
 	private static final Integer PARTLENGTH = 4 * 1024 * 1024;
 
@@ -44,7 +44,7 @@ public class FileUploadClient {
 			return;
 		}
 		
-		String url = DOMAIN + "upload";
+		String url = DOMAIN + "/upload";
 		Integer resourceid = 1038167;
 		List<FileEntity> parts = splitBySize(file);
 		
