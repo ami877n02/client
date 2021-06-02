@@ -5,15 +5,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
 import com.bbjob.entity.FileEntity;
 import com.bbjob.util.FileUtil;
 import com.bbjob.util.HttpClientTool;
 import com.bbjob.util.Split;
-import com.bbjob.util.SplitRunnable;
 
 public class FileUploadClient {
 	

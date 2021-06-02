@@ -71,7 +71,7 @@ public class HttpClientTool {
 		httpPost.setHeader("CurTime", curTime);
 		String checkSum=CheckSumBuilder.getCheckSum(APPSECRET, nonce, curTime);
 		httpPost.setHeader("CheckSum", checkSum);
-		// httpPost.addHeader("Content-type","application/json; charset=utf-8");  
+		// httpPost.addHeader("Content-type","multipart/form-data");  
 		// httpPost.setHeader("Accept", "application/json");
 		
 		CloseableHttpResponse response = null;
@@ -87,12 +87,30 @@ public class HttpClientTool {
 	    	MultipartEntity reqEntity = new MultipartEntity();
 	    	FileBody bin = new FileBody(file);
 	    	reqEntity.addPart("file", bin);
-	    	reqEntity.addPart("name", new StringBody(params.get("name").toString()));
-	    	reqEntity.addPart("total", new StringBody(params.get("total").toString()));
-	    	reqEntity.addPart("index", new StringBody(params.get("index").toString()));
-	    	reqEntity.addPart("fileMd5", new StringBody(params.get("fileMd5").toString()));
-	    	reqEntity.addPart("md5", new StringBody(params.get("md5").toString()));
-	    	reqEntity.addPart("resourceid", new StringBody(params.get("resourceid").toString()));
+	    	if (params.get("name") != null) {
+	    		reqEntity.addPart("name", new StringBody(params.get("name").toString()));
+	    	}
+	    	
+	    	if (params.get("total") != null ) {
+	    		reqEntity.addPart("total", new StringBody(params.get("total").toString()));
+	    	}
+	    	
+	    	if (params.get("index") != null) {
+	    		reqEntity.addPart("index", new StringBody(params.get("index").toString()));
+	    	}
+	    	
+	    	if (params.get("fileMd5") != null) {
+	    		reqEntity.addPart("fileMd5", new StringBody(params.get("fileMd5").toString()));
+	    	}
+	    	
+	    	if (params.get("md5") != null) {
+	    		reqEntity.addPart("md5", new StringBody(params.get("md5").toString()));
+	    	}
+	    	
+	    	if (params.get("resourceid") != null) {
+	    		reqEntity.addPart("resourceid", new StringBody(params.get("resourceid").toString()));
+	    	}
+	    	
 	    	// reqEntity
 	    	
 	    	httpPost.setEntity(reqEntity);
