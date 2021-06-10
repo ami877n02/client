@@ -31,11 +31,11 @@ public class HttpClientTool {
 	
 	private static final CloseableHttpClient httpClient;
 	public static final String CHARSET = "UTF-8";
-	private static final String APPKEY = "1c294aa17db7e35e4edf6b607f20602ea72808a5";
-	private static final String APPSECRET = "3544390FAD1D";
+	private static final String APPKEY = "4A27A728";
+	private static final String APPSECRET = "61fef93eb7d6";
 	
 	static {
-		RequestConfig config = RequestConfig.custom().setConnectTimeout(6000).setSocketTimeout(6000).build();
+		RequestConfig config = RequestConfig.custom().setConnectTimeout(100000).setSocketTimeout(100000).build();
 		httpClient = HttpClientBuilder.create().setDefaultRequestConfig(config).build();
 	}
 	
@@ -88,27 +88,27 @@ public class HttpClientTool {
 	    	FileBody bin = new FileBody(file);
 	    	reqEntity.addPart("file", bin);
 	    	if (params.get("name") != null) {
-	    		reqEntity.addPart("name", new StringBody(params.get("name").toString()));
+	    		reqEntity.addPart("name", new StringBody(params.get("name").toString(), Charset.forName(charset2)));
 	    	}
 	    	
 	    	if (params.get("total") != null ) {
-	    		reqEntity.addPart("total", new StringBody(params.get("total").toString()));
+	    		reqEntity.addPart("total", new StringBody(params.get("total").toString(), Charset.forName(charset2)));
 	    	}
 	    	
 	    	if (params.get("index") != null) {
-	    		reqEntity.addPart("index", new StringBody(params.get("index").toString()));
+	    		reqEntity.addPart("index", new StringBody(params.get("index").toString(), Charset.forName(charset2)));
 	    	}
 	    	
 	    	if (params.get("fileMd5") != null) {
-	    		reqEntity.addPart("fileMd5", new StringBody(params.get("fileMd5").toString()));
+	    		reqEntity.addPart("fileMd5", new StringBody(params.get("fileMd5").toString(), Charset.forName(charset2)));
 	    	}
 	    	
 	    	if (params.get("md5") != null) {
-	    		reqEntity.addPart("md5", new StringBody(params.get("md5").toString()));
+	    		reqEntity.addPart("md5", new StringBody(params.get("md5").toString(), Charset.forName(charset2)));
 	    	}
 	    	
 	    	if (params.get("resourceid") != null) {
-	    		reqEntity.addPart("resourceid", new StringBody(params.get("resourceid").toString()));
+	    		reqEntity.addPart("resourceid", new StringBody(params.get("resourceid").toString(), Charset.forName(charset2)));
 	    	}
 	    	
 	    	// reqEntity
