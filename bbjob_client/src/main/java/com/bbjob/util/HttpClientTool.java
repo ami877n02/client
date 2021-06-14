@@ -71,6 +71,7 @@ public class HttpClientTool {
 		httpPost.setHeader("CurTime", curTime);
 		String checkSum=CheckSumBuilder.getCheckSum(APPSECRET, nonce, curTime);
 		httpPost.setHeader("CheckSum", checkSum);
+		httpPost.setHeader("ip", "");
 		// httpPost.addHeader("Content-type","multipart/form-data");  
 		// httpPost.setHeader("Accept", "application/json");
 		
@@ -153,6 +154,7 @@ public class HttpClientTool {
 		httpPost.setHeader("CurTime", curTime);
 		String checkSum=CheckSumBuilder.getCheckSum(APPSECRET, nonce, curTime);
 		httpPost.setHeader("CheckSum", checkSum);
+		httpPost.setHeader("ip", "");
 		httpPost.addHeader("Content-type","application/json; charset=utf-8");  
 		httpPost.setHeader("Accept", "application/json");
 			
@@ -210,7 +212,7 @@ public class HttpClientTool {
 		httpGet.setHeader("CurTime", curTime);
 		String checkSum=CheckSumBuilder.getCheckSum(APPSECRET, nonce, curTime);
 		httpGet.setHeader("CheckSum", checkSum);
-		
+		httpGet.setHeader("ip", "");
 		try{
 			if (params != null && !params.isEmpty()) {
 				List<NameValuePair> pairs = new ArrayList<NameValuePair>(params.size());
@@ -267,6 +269,7 @@ public class HttpClientTool {
 		httpPost.setHeader("CurTime", curTime);
 		String checkSum=CheckSumBuilder.getCheckSum(APPSECRET, nonce, curTime);
 		httpPost.setHeader("CheckSum", checkSum);
+		httpPost.setHeader("ip", "");
 		httpPost.addHeader("Content-type","application/json; charset=utf-8");  
 		httpPost.setHeader("Accept", "application/json");
 		
